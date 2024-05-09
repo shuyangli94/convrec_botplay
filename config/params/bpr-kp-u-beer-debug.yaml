@@ -1,0 +1,33 @@
+# @package _group_
+splits_loc: YOUR/DATA/DIR/beeradvocate_DC_splits.pkl
+kp_loc: YOUR/DATA/DIR/beeradvocate_DC_ix.pkl
+system: BPRUserKPSystem
+
+# Model config
+model_type:
+  k: 10
+  user_emb: True
+  enc_layers: 0
+  proj_layers: 0
+
+# Temp, to be updated in script
+n_items: TEMP
+n_users: TEMP
+n_kp: TEMP
+
+# Targets
+target_item: True
+use_user_kp: True
+
+# Training config
+neg_subset_ratio: null
+batch_size: 4096
+grad_acc: 1
+kp_weight: 0.5
+lr: 0.01
+l2_lambda: 0.01
+fixed_lr: True
+num_workers: 10
+max_epochs: 10
+grad_clip_val: 0.0
+optimizer: radam

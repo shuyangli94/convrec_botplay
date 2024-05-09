@@ -1,0 +1,47 @@
+defaults:
+  - params: ???
+
+params:
+    name: ???
+    load: null
+    system: ???
+    # Model config
+    model_type: null
+    ckpt_path: YOUR/CKPT/DIR
+
+    # Training/validation file locations
+    train_path: /INVALID
+    valid_path: /INVALID
+    maps_path: /INVALID
+    snippets_loc: /INVALID
+    splits_loc: ???
+    item_loc: /INVALID
+
+    # Training configs
+    max_epochs: ???
+    max_steps: 100000000
+    batch_size: ???
+    grad_acc: 1
+    grad_clip_val: null
+    lr: ???
+    optimizer: radam
+    fixed_lr: True
+    num_workers: 6
+    l2_lambda: ???
+    sample: null
+
+    # Number of users/items
+    n_items: null
+    n_users: null
+
+    # Validation
+    val_interval: 1.0
+    check_val_every_n_epoch: 1
+
+    # Debug
+    debug: False
+    limit_data: null
+    overwrite: False
+
+    # 16-bit
+    amp: False

@@ -1,0 +1,37 @@
+# @package _group_
+splits_loc: YOUR/DATA/DIR/beeradvocate_DC_splits.pkl
+kp_loc: YOUR/DATA/DIR/beeradvocate_DC_ix.pkl
+system: FineTuneProjPLRecSystem
+pretrained: YOUR/MODEL/PATH
+
+# Temp, to be updated in script
+n_items: TEMP
+n_users: TEMP
+n_kp: TEMP
+
+# Fine-tuning params
+discount: 0.9
+freeze: False
+max_turns: 3
+loss: CE
+behavior: coop
+fb_type: "N"
+aspect_loss: 0.5
+
+# Targets
+target_item: True
+
+# Training config
+neg_subset_ratio: null
+batch_size: 4096
+grad_acc: 1
+lr: 0.01
+l2_lambda: 0.001
+fixed_lr: True
+num_workers: 10
+max_epochs: 1
+grad_clip_val: 0.0
+optimizer: radam
+
+# Scheduling
+claim: False
